@@ -2,4 +2,13 @@
 
 .header {
     background-color: $color-terciary;
+    padding: 10px;
+
+
+    &__title{
+        font-size: 14px;
+        color: white;
+        font-weight: normal;
+    }
+
 }

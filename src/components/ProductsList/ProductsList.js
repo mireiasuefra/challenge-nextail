@@ -21,8 +21,7 @@ function ProductsList() {
 
   return (
     <section className="product-list">
-      <h2>Lista de productos</h2>
-      <ul>{renderProducts()}</ul>
+      <ul className="product-list__list">{renderProducts()}</ul>
     </section>
   );
 }

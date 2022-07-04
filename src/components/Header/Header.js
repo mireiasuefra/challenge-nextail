@@ -3,7 +3,7 @@ import "./Header.scss";
 function Header() {
   return (
     <div className="header">
-      <h1>Nextail Challenge by Mireia Suero</h1>
+      <h1 className="header__title">Top Stockouts Review</h1>
     </div>
   );
 }
