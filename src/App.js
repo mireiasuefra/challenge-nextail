@@ -1,14 +1,23 @@
 import "./App.scss";
+import { useEffect, useState } from "react";
+import getProducts from "./services/get-products";
 import Header from "./components/Header/Header";
+import ProductsList from "./components/ProductsList/ProductsList";
 
 function App() {
- 
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    getProducts().then((response) => {
+      setProducts(response);
+    });
+  }, []);
 
   return (
     <div className="bg-page">
-      <Header/>
+      <Header />
       <main>
-        Main
+        <ProductsList />
       </main>
     </div>
   );
