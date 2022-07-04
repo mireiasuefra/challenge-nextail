@@ -1,11 +1,10 @@
-import "./Header.css";
+import "./Header.scss";
 
 function Header() {
   return (
- <>
-    Nextail Challenge by Mireia Suero
- </>
-
+    <div className="header">
+      <h1>Nextail Challenge by Mireia Suero</h1>
+    </div>
   );
 }
 

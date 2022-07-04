@@ -1,0 +1,13 @@
+@import "./styles/shared.scss";
+
+.bg-page {
+    height: 100%;
+    min-height: 100vh;
+    font-family: $principal-font;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  
+  
