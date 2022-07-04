@@ -1,11 +1,15 @@
 import "./ProductDetail.scss";
 
-function ProductDetail() {
+function ProductDetail(props) {
+
+
+
+console.log('DetalleProducto', props.product.name)
 
   return (
-    <div className="detail-product">
-      <h2>detalle del producto</h2>
-    </div>
+    <li className="detail-product">
+      <h3>detalle del producto: {props.product.name}</h3>
+    </li>
   );
 }
 
