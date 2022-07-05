@@ -1,7 +1,79 @@
 @import "./../../styles/shared.scss";
 
 .product-detail {
-    background-color: white;
-    margin: 7px;
+  background-color: $color-fifth;
+  margin: 7px;
+  border-radius: 5px;
 
+  &__image {
+    height: 320px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding-bottom: 10px;
+  }
+
+  &__code {
+    font-size: 11px;
+    color: $color-fourth;
+    padding-left: 10px;
+  }
+
+  &__name {
+    font-size: 14px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+  }
+
+  &__price {
+    color: $color-fourth;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+  }
+
+  &__stockout {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    border-top: 1px solid $color-sixth;
+    border-bottom: 1px solid $color-sixth;
+
+    &-percent {
+      color: $color-fourth;
+    }
+
+    &-text {
+      color: $color-sixth;
+      font-size: 12px;
+      padding-left: 8px;
+    }
+  }
+
+  &__coverage {
+    text-align: end;
+    font-size: 12px;
+    padding-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 30px;
+
+    &--good {
+      color: rgb(78, 240, 86);
+    }
+
+    &--low {
+      color: rgb(243, 44, 44);
+    }
+
+    &-text {
+      color: $color-sixth;
+      text-transform: uppercase;
+    }
+  }
 }
