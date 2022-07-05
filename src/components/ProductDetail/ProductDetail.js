@@ -6,11 +6,15 @@ function ProductDetail(props) {
 
   return (
     <li className="product-detail">
+            <p className="product-detail__ranking">
+        {props.product.sales_ranking}
+      </p>
       <img
         className="product-detail__image"
         src={`images/${props.product.code}.jpg`}
         alt={props.product.name}
       ></img>
+
       <small className="product-detail__code">{props.product.code}</small>
       <h2 className="product-detail__name">{props.product.name}</h2>
       <div>
@@ -18,7 +22,9 @@ function ProductDetail(props) {
       </div>
       {/* <div>GRAFICA</div>*/}
       <div className="product-detail__stockout">
-        <p className="product-detail__stockout-percent">{stockout.toFixed(1)} % </p>
+        <p className="product-detail__stockout-percent">
+          {stockout.toFixed(1)} %{" "}
+        </p>
         <small className="product-detail__stockout-text">stockout</small>
       </div>
       <div className="product-detail__coverage">
