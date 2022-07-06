@@ -74,28 +74,6 @@
     padding-bottom: 20px;
   }
 
-  &__stockout {
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    display: flex;
-    flex-direction: row;
-    align-items: end;
-    border-top: 1px solid $color-sixth;
-    border-bottom: 1px solid $color-sixth;
-
-    &-percent {
-      color: $color-fourth;
-    }
-
-    &-text {
-      color: $color-sixth;
-      font-size: 12px;
-      padding-left: 8px;
-    }
-  }
-
   &__coverage {
     text-align: end;
     font-size: 12px;
@@ -104,11 +82,11 @@
     padding-bottom: 30px;
 
     &--good {
-      color: rgb(78, 240, 86);
+      color: #4DD113;
     }
 
     &--low {
-      color: rgb(243, 44, 44);
+      color: #D11313;
     }
 
     &-text {

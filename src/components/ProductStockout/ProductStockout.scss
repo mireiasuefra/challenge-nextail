@@ -1,0 +1,29 @@
+@import "./../../styles/shared.scss";
+
+.product-stockout {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 15px;
+  border-top: 1px solid $color-sixth;
+  border-bottom: 1px solid $color-sixth;
+
+  &__percent {
+    color: $color-fourth;
+  }
+
+  &__text {
+    color: $color-sixth;
+    font-size: 12px;
+    padding-left: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  &__group-text {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 7px;
+  }
+}
