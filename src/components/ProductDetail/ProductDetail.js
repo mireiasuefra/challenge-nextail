@@ -5,8 +5,10 @@ function ProductDetail(props) {
   const isGoodCoverage = props.product.wh_coverage > 0.5;
 
   return (
-    <li className="product-detail">
-
+    <li
+      className="product-detail"
+      onClick={() => props.onComplete(props.product.code)}
+    >
       <p className="product-detail__ranking">{props.product.sales_ranking}</p>
       <button className="product-detail__button">Mark Complete</button>
       <img
@@ -18,7 +20,7 @@ function ProductDetail(props) {
       <small className="product-detail__code">{props.product.code}</small>
       <h2 className="product-detail__name">{props.product.name}</h2>
       <div>
-        <p className="product-detail__price"> {props.product.price} €</p>
+        <p className="product-detail__price">{props.product.price} €</p>
       </div>
       {/* <div>GRAFICA</div>*/}
       <div className="product-detail__stockout">

@@ -16,37 +16,32 @@
   }
 
   &:hover .product-detail__button {
-    opacity: 10;
+    opacity: 1;
   }
 
   &__ranking {
+    position: absolute;
+    transform: translate(10px, 8px);
     font-size: 11px;
-    color: $color-fifth;
-    padding-left: 10px;
+    max-width: 18px;
+    padding: 4px;
     border: 1px solid $color-sixth;
     border-radius: 20%;
     background-color: $color-sixth;
-    padding: 4px;
-    margin-left: 10px;
-    margin-top: 8px;
-    max-width: 18px;
+    color: $color-fifth;
     text-align: center;
-    position: fixed;
-    float: left;
   }
 
   &__button {
+    position: absolute;
+    transform: translate(75px, 150px);
+    text-align: center;
     font-size: 14px;
     color: $color-sixth;
     border: 2px solid $color-sixth;
-    border-radius: 20px;
-    padding: 5px;
-    margin-left: 75px;
-    margin-top: 130px;
-    text-align: center;
-    position: fixed;
-    float: left;
     background: transparent;
+    border-radius: 20px;
+    padding: 8px;
     opacity: 0;
   }
 

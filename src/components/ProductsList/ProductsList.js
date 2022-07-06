@@ -7,13 +7,24 @@ import ProductDetail from "./../ProductDetail/ProductDetail";
 function ProductsList() {
   const [products, setProducts] = useState([]);
 
+  const markComplete = (code) => {
+    const newProductList = products.filter((product) => {
+      return product.code !== code;
+    });
+    setProducts(newProductList);
+  };
+
   const renderProducts = () => {
     return products
-      .sort((a, b) =>       
-        a.sales_ranking > b.sales_ranking ? 1 : -1
-      )
+      .sort((a, b) => (a.sales_ranking > b.sales_ranking ? 1 : -1))
       .map((oneProduct) => {
-        return <ProductDetail key={oneProduct.code} product={oneProduct} />;
+        return (
+          <ProductDetail
+            key={oneProduct.code}
+            product={oneProduct}
+            onComplete={markComplete}
+          />
+        );
       });
   };
 
