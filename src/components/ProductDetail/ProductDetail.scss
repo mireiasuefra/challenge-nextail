@@ -6,14 +6,17 @@
   border-radius: 5px;
   cursor: pointer;
 
-  &__image {
-    height: 320px;
-    width: 100%;
-    object-fit: cover;
-    object-position: top;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    padding-bottom: 10px;
+  &:hover .product-detail__image {
+    opacity: 0.2;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    -ms-transition: opacity 500ms;
+    transition: opacity 500ms;
+  }
+
+  &:hover .product-detail__button {
+    opacity: 10;
   }
 
   &__ranking {
@@ -30,6 +33,31 @@
     text-align: center;
     position: fixed;
     float: left;
+  }
+
+  &__button {
+    font-size: 14px;
+    color: $color-sixth;
+    border: 2px solid $color-sixth;
+    border-radius: 20px;
+    padding: 5px;
+    margin-left: 75px;
+    margin-top: 130px;
+    text-align: center;
+    position: fixed;
+    float: left;
+    background: transparent;
+    opacity: 0;
+  }
+
+  &__image {
+    height: 320px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding-bottom: 10px;
   }
 
   &__code {

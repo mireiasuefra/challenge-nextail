@@ -6,9 +6,9 @@ function ProductDetail(props) {
 
   return (
     <li className="product-detail">
-            <p className="product-detail__ranking">
-        {props.product.sales_ranking}
-      </p>
+
+      <p className="product-detail__ranking">{props.product.sales_ranking}</p>
+      <button className="product-detail__button">Mark Complete</button>
       <img
         className="product-detail__image"
         src={`images/${props.product.code}.jpg`}
