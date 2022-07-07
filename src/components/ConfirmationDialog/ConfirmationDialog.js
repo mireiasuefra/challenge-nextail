@@ -1,5 +1,3 @@
-
-
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
@@ -9,6 +7,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 
 function ConfirmationDialog(props) {
 
+
   return (
     <Dialog
       open={props.open}
@@ -16,21 +15,18 @@ function ConfirmationDialog(props) {
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
     >
-      <DialogTitle id="alert-dialog-title">
-        {"Use Google's location service?"}
-      </DialogTitle>
+      <DialogTitle id="alert-dialog-title">{"¡Un momento!"}</DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
-          Let Google help apps determine location. This means sending anonymous
-          location data to Google, even when no apps are running.
+          ¿Seguro que quieres eliminar este producto?
         </DialogContentText>
       </DialogContent>
       <DialogActions>
         <Button onClick={props.handleClose} color="primary">
-          Disagree
+          Si
         </Button>
         <Button onClick={props.handleClose} color="primary" autoFocus>
-          Agree
+          No
         </Button>
       </DialogActions>
     </Dialog>

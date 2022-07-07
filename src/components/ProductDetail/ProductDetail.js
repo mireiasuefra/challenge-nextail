@@ -1,6 +1,6 @@
 import "./ProductDetail.scss";
-import { useState } from "react";
-import ConfirmationDialog from "../ConfirmationDialog/ConfirmationDialog";
+// import { useState } from "react";
+// import ConfirmationDialog from "../ConfirmationDialog/ConfirmationDialog";
 import ProductStockout from "../ProductStockout/ProductStockout";
 
 function ProductDetail(props) {
@@ -23,6 +23,8 @@ function ProductDetail(props) {
       className="product-detail"
       onClick={() => props.onComplete(props.product.code)}
     >
+      {/*<li className="product-detail" onClick={handleClickOpen}>
+      <ConfirmationDialog handleClose={handleClose} open={open} />*/}
       <p className="product-detail__ranking">{props.product.sales_ranking}</p>
       <button className="product-detail__button">Mark Complete</button>
       <img
