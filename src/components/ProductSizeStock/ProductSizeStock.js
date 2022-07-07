@@ -18,12 +18,12 @@ function ProductSizeStock(props) {
   ];
 
   return (
-      <Chart data={sizeStock} height={150}>
-        <ArgumentAxis />
-        <ValueAxis />
+    <Chart data={sizeStock} height={200}>
+      <ArgumentAxis />
+      <ValueAxis />
 
-        <BarSeries valueField="value" argumentField="argument" color="#000000"/>
-      </Chart>
+      <BarSeries valueField="value" argumentField="argument" color="#000000" />
+    </Chart>
   );
 }
 

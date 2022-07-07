@@ -1,31 +1,18 @@
 import "./ProductDetail.scss";
-// import { useState } from "react";
-// import ConfirmationDialog from "../ConfirmationDialog/ConfirmationDialog";
 import ProductStockout from "../ProductStockout/ProductStockout";
 import ProductSizeStock from "../ProductSizeStock/ProductSizeStock";
 
 function ProductDetail(props) {
   const isGoodCoverage = props.product.wh_coverage > 0.5;
 
-  /*
-  const [open, setOpen] = useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
+  const onClick = () => {
+    if (window.confirm("Do you really want to complete?")) {
+      props.onComplete(props.product.code);
+    }
   };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-  */
 
   return (
-    <li
-      className="product-detail"
-      onClick={() => props.onComplete(props.product.code)}
-    >
-      {/*<li className="product-detail" onClick={handleClickOpen}>
-      <ConfirmationDialog handleClose={handleClose} open={open} />*/}
+    <li className="product-detail" onClick={onClick}>
       <p className="product-detail__ranking">{props.product.sales_ranking}</p>
       <button className="product-detail__button">Mark Complete</button>
       <img

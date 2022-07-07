@@ -1,12 +1,12 @@
 @import "./../../styles/shared.scss";
 
 .header {
-    background-color: $color-terciary;
-    padding: 10px;
+  background-color: $color-terciary;
+  padding: 10px;
 
-    &__title{
-        font-size: 14px;
-        color: $color-fifth;
-        font-weight: normal;
-    }
+  &__title {
+    font-size: 14px;
+    color: $color-fifth;
+    font-weight: normal;
+  }
 }
