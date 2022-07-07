@@ -2,6 +2,7 @@ import "./ProductDetail.scss";
 // import { useState } from "react";
 // import ConfirmationDialog from "../ConfirmationDialog/ConfirmationDialog";
 import ProductStockout from "../ProductStockout/ProductStockout";
+import ProductSizeStock from "../ProductSizeStock/ProductSizeStock";
 
 function ProductDetail(props) {
   const isGoodCoverage = props.product.wh_coverage > 0.5;
@@ -38,7 +39,7 @@ function ProductDetail(props) {
       <div>
         <p className="product-detail__price">{props.product.price} €</p>
       </div>
-      {/* <div>GRAFICA</div>*/}
+      <ProductSizeStock product={props.product} />
       <ProductStockout product={props.product} />
       <div className="product-detail__coverage">
         {isGoodCoverage ? (

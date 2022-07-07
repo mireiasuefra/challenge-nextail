@@ -1,45 +1,37 @@
 import "./ProductStockout.scss";
 
 import React from "react";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
-import LinearProgress from "@material-ui/core/LinearProgress";
+import { styled } from "@mui/material/styles";
+import Box from '@mui/material/Box';
+import LinearProgress, {
+  linearProgressClasses,
+} from "@mui/material/LinearProgress";
 
-const BorderLinearProgress = withStyles((theme) => ({
-  root: {
-    height: 10,
-    borderRadius: 5,
-  },
-  colorPrimary: {
+const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+  height: 10,
+  borderRadius: 5,
+  [`&.${linearProgressClasses.colorPrimary}`]: {
     backgroundColor:
-      theme.palette.grey[theme.palette.type === "light" ? 200 : 700],
+      theme.palette.grey[theme.palette.mode === "light" ? 200 : 800],
   },
-  bar: {
+  [`& .${linearProgressClasses.bar}`]: {
     borderRadius: 5,
-    backgroundColor: "#4DD113",
+    backgroundColor: theme.palette.mode === "light" ? "#4DD113" : "#4DD113",
   },
-}))(LinearProgress);
-
-const useStyles = makeStyles({
-  root: {
-    flexGrow: 1,
-  },
-});
+}));
 
 function ProductStockout(props) {
-  const classes = useStyles();
   const stockout = props.product.stockout_rate * 100;
 
   return (
     <div className="product-stockout">
       <div className="product-stockout__group-text">
-        <p className="product-stockout__percent">
-          {stockout.toFixed(1)} %{" "}
-        </p>
+        <p className="product-stockout__percent">{stockout.toFixed(1)} % </p>
         <small className="product-stockout__text">stockout</small>
       </div>
-      <div className={classes.root} >
+      <Box sx={{ flexGrow: 1 }}>
         <BorderLinearProgress variant="determinate" value={stockout} />
-      </div>
+      </Box>
     </div>
   );
 }
